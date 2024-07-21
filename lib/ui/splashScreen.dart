@@ -11,9 +11,6 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 50.h,
-      width: 100.w,
-    );
+    return Container();
   }
 }
