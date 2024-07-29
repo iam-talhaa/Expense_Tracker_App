@@ -40,7 +40,7 @@ class _ExpanseTrakerState extends State<ExpanseTraker> {
           home: child,
         );
       },
-      child: SignUpScreen(),
+      child: LoginScreen(),
     );
   }
 }
