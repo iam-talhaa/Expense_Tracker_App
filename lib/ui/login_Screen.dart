@@ -25,6 +25,16 @@ class _LoginScreenState extends State<LoginScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Text(
+              "Login ",
+              style: TextStyle(
+                  fontSize: 40,
+                  color: Colors.amber,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: 20,
+            ),
             Form(
                 key: _key,
                 child: Column(
@@ -73,17 +83,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   setState(() {
                     isloading = true;
                   });
-                  if (_key.currentState!.validate()) {
-                    _auth
-                        .createUserWithEmailAndPassword(
-                            email: _emailController.text.toString(),
-                            password: _passwordController.text.toString())
-                        .then((value) {
-                      UTils().ShowFlutterToast("SignUP successfully");
-                    }).onError((error, StackTrace) {
-                      UTils().ShowFlutterToast(error.toString());
-                    });
-                  }
+                  if (_key.currentState!.validate()) {}
                 },
                 child: Container(
                   height: 50,
@@ -91,7 +91,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   decoration: BoxDecoration(
                       color: Colors.amber,
                       borderRadius: BorderRadius.circular(20)),
-                  child: Center(child: Text('Sign UP ')),
+                  child: Center(
+                      child: Text(
+                    ' Login ',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  )),
                 ),
               ),
             )
